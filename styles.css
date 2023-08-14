@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-panel, .right-panel {
+    flex: 1;
+    margin: 10px;
+}
+
+textarea {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.replacementRow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.replacementRow input {
+    margin: 0 5px;
+}
+
+button {
+    margin-left: 10px;
+}
+

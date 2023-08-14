@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiador de Palabras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Contenedor principal que aloja los dos paneles: entrada/salida de texto y configuración de palabras -->
+    <div class="container">
+        <!-- Panel de la izquierda: entrada y salida de texto -->
+        <div class="left-panel">
+            <!-- Textarea para ingresar el texto original -->
+            <textarea id="inputText" rows="10" cols="50" placeholder="Introduce el texto aquí..."></textarea><br>
+            <!-- Botón para iniciar el reemplazo de palabras -->
+            <button onclick="replaceWords()">Reemplazar Palabras</button><br>
+            <!-- Textarea para mostrar el texto con las palabras reemplazadas -->
+            <textarea id="outputText" rows="10" cols="50" readonly placeholder="Texto reemplazado aparecerá aquí..."></textarea>
+        </div>
+        <!-- Panel de la derecha: configuración de palabras a reemplazar -->
+        <div class="right-panel">
+            <h2>Palabras a reemplazar:</h2>
+            <div id="replacements">
+                <!-- Ejemplos de palabras para reemplazar -->
+                <div class="replacementRow">
+                    <input type="text" class="keyword" value="stryker">
+                    →
+                    <input type="text" class="replacement" value="dumb_information">
+                    <button onclick="removeRow(this)">Eliminar</button>
+                </div>
+                <div class="replacementRow">
+                    <input type="text" class="keyword" value="garner">
+                    →
+                    <input type="text" class="replacement" value="dumb_information">
+                    <button onclick="removeRow(this)">Eliminar</button>
+                </div>
+            </div>
+            <!-- Botón para agregar una nueva palabra a reemplazar -->
+            <button onclick="addRow()">Agregar Palabra</button>
+        </div>
+    </div>
+    <!-- Script que contiene la lógica de la aplicación -->
+    <script src="script.js"></script>
+</body>
+</html>
